@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Reportar Incidente</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Incidentes (Help Desk)</h1>
+        <p>Formulario de Registro de Fallos Técnicos</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio (Dashboard)</a></li>
+                <li><a href="reportar.html"><strong>Reportar Incidente</strong></a></li>
+                <li><a href="tickets.html">Lista de Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section aria-labelledby="form-titulo">
+            <h2 id="form-titulo">Registrar Nuevo Incidente</h2>
+            <p>Por favor, complete los datos del fallo. El motor de asignación derivará el caso al técnico especialista.</p>
+
+            <form action="#" method="POST">
+                
+                <div>
+                    <label for="titulo">Título del Incidente:</label><br>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ej. Caída de enlace switch core" required aria-required="true">
+                </div>
+                
+                <br>
+
+                <div>
+                    <label for="categoria">Categoría (Fábrica de Objetos):</label><br>
+                    <select id="categoria" name="categoria" required aria-required="true">
+                        <option value="">-- Seleccione una opción --</option>
+                        <option value="hardware">Hardware (Servidores / Almacenamiento)</option>
+                        <option value="red">Redes (Cisco / Fortinet)</option>
+                        <option value="software">Software (Debian / Servicios)</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="prioridad">Nivel de Prioridad:</label><br>
+                    <select id="prioridad" name="prioridad" required aria-required="true">
+                        <option value="baja">Baja</option>
+                        <option value="media" selected>Media</option>
+                        <option value="alta">Alta</option>
+                        <option value="critica">Crítica (Afecta la continuidad)</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="descripcion">Descripción detallada del fallo:</label><br>
+                    <textarea id="descripcion" name="descripcion" rows="6" cols="50" placeholder="Escriba los síntomas detectados, trazas de comandos o logs de error..." required aria-required="true"></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <button type="submit">Enviar Ticket a Soporte</button>
+                    <button type="reset">Limpiar Formulario</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Universidad Técnica de Manabí - Tecnologías de la Información</p>
+        <p>Desarrollado por: <strong>Fausto Damian Guano Loya</strong></p>
+    </footer>
+
+</body>
+</html>

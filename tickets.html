@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Monitoreo de Tickets</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Incidentes (Help Desk)</h1>
+        <p>Historial y Control de Ciclos de Vida (State Machine)</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio (Dashboard)</a></li>
+                <li><a href="reportar.html">Reportar Incidente</a></li>
+                <li><a href="tickets.html"><strong>Lista de Tickets</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section aria-labelledby="tabla-titulo">
+            <h2 id="tabla-titulo">Listado General de Incidentes Activos</h2>
+            <p>Los cambios de estado gatillan alertas automáticas a través del <em>Patrón Observer</em>.</p>
+
+            <table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
+                <caption>Monitoreo de Tickets de Infraestructura</caption>
+                <thead>
+                    <tr>
+                        <th id="th-id">ID</th>
+                        <th id="th-fecha">Fecha / Hora</th>
+                        <th id="th-titulo">Título del Incidente</th>
+                        <th id="th-cat">Categoría</th>
+                        <th id="th-prioridad">Prioridad</th>
+                        <th id="th-estado">Estado Actual (State)</th>
+                        <th id="th-tecnico">Técnico Asignado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="th-id">INC-001</td>
+                        <td headers="th-fecha">2026-05-21 14:20</td>
+                        <td headers="th-titulo">Fallo en montaje de volumen NFS en nodo Debian</td>
+                        <td headers="th-cat">Software</td>
+                        <td headers="th-prioridad">Alta</td>
+                        <td headers="th-estado"><code>En Progreso</code></td>
+                        <td headers="th-tecnico">Ing. Soporte Linux</td>
+                    </tr>
+                    <tr>
+                        <td headers="th-id">INC-002</td>
+                        <td headers="th-fecha">2026-05-21 15:05</td>
+                        <td headers="th-titulo">Pérdida de paquetes en Firewall FortiGate 400F</td>
+                        <td headers="th-cat">Redes</td>
+                        <td headers="th-prioridad">Crítica</td>
+                        <td headers="th-estado"><code>Abierto</code></td>
+                        <td headers="th-tecnico">Por Asignar (Auto)</td>
+                    </tr>
+                    <tr>
+                        <td headers="th-id">INC-003</td>
+                        <td headers="th-fecha">2026-05-20 09:11</td>
+                        <td headers="th-titulo">Reemplazo de disco SAS en arreglo RAID 5 - Servidor Dell</td>
+                        <td headers="th-cat">Hardware</td>
+                        <td headers="th-prioridad">Media</td>
+                        <td headers="th-estado"><code>Resuelto</code></td>
+                        <td headers="th-tecnico">Técnico de Infraestructura</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Universidad Técnica de Manabí - Tecnologías de la Información</p>
+        <p>Desarrollado por: <strong>Fausto Damian Guano Loya</strong></p>
+    </footer>
+
+</body>
+</html>
