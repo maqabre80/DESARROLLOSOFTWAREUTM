@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Kit · Sistema de Gestión de Incidentes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="docs-topbar">
+    <div class="docs-topbar__brand">
+      <span>UI Kit</span>
+      <span class="mono">/ sistema-gestion-incidentes</span>
+    </div>
+    <nav class="docs-nav">
+      <a href="#variables">Variables</a>
+      <a href="#botones">Botones</a>
+      <a href="#formularios">Formularios</a>
+      <a href="#tarjetas">Tarjetas</a>
+      <a href="#alertas">Alertas</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="docs-hero">
+    <div class="docs-hero__inner">
+      <div>
+        <p class="docs-hero__eyebrow">Actividad #5 · Unidad 3 · DSI</p>
+        <h1>Biblioteca de componentes para la gestión de incidentes</h1>
+        <p>
+          Botones, formularios, tarjetas y alertas construidos con CSS3 puro,
+          variables en <code>:root</code> y <code>box-sizing: border-box</code>,
+          listos para reutilizarse en cualquier pantalla del Help Desk.
+        </p>
+      </div>
+
+      <div class="u-stack">
+        <input type="checkbox" id="alert-sla" class="alert-dismiss">
+        <div class="alert alert--warning">
+          <span class="alert__icon">!</span>
+          <div class="alert__content">
+            <strong>SLA por vencer</strong>
+            Quedan 2 horas para el límite de respuesta de este ticket.
+          </div>
+          <label for="alert-sla" class="alert__close" aria-label="Cerrar alerta">×</label>
+        </div>
+
+        <article class="card card--ticket" data-status="critico">
+          <header class="card__header">
+            <span class="mono">INC-2049</span>
+            <span class="badge badge--danger">Crítico</span>
+          </header>
+          <div class="card__body">
+            <p><strong>Caída del servidor de correo institucional.</strong></p>
+            <p>Reportado por 14 usuarios del campus. Afecta el envío de notificaciones automáticas.</p>
+          </div>
+          <footer class="card__footer">
+            <button class="btn btn--primary btn--sm">Asignar técnico</button>
+            <button class="btn btn--secondary btn--sm">Ver detalle</button>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VARIABLES -->
+  <section class="docs-section" id="variables">
+    <div class="docs-section__head">
+      <div>
+        <span class="docs-section__code">UI-KIT-00 · Tokens</span>
+        <h2>Variables CSS</h2>
+      </div>
+    </div>
+    <p class="docs-section__desc">
+      Toda la línea gráfica nace de variables declaradas en <code>:root</code>.
+      Los colores de estado reproducen el vocabulario real del sistema
+      (nuevo, pendiente, resuelto, crítico).
+    </p>
+
+    <div class="docs-grid docs-grid--swatches">
+      <div class="docs-swatch">
+        <div class="docs-swatch__chip" style="background:var(--ink)"></div>
+        <div class="docs-swatch__meta"><strong>Tinta (--ink)</strong><span>#11142B</span></div>
+      </div>
+      <div class="docs-swatch">
+        <div class="docs-swatch__chip" style="background:var(--primary)"></div>
+        <div class="docs-swatch__meta"><strong>Marca (--primary)</strong><span>#3454D1</span></div>
+      </div>
+      <div class="docs-swatch">
+        <div class="docs-swatch__chip" style="background:var(--info)"></div>
+        <div class="docs-swatch__meta"><strong>Nuevo (--info)</strong><span>#2E9BB5</span></div>
+      </div>
+      <div class="docs-swatch">
+        <div class="docs-swatch__chip" style="background:var(--warning)"></div>
+        <div class="docs-swatch__meta"><strong>Pendiente (--warning)</strong><span>#E2A33D</span></div>
+      </div>
+      <div class="docs-swatch">
+        <div class="docs-swatch__chip" style="background:var(--success)"></div>
+        <div class="docs-swatch__meta"><strong>Resuelto (--success)</strong><span>#18A957</span></div>
+      </div>
+      <div class="docs-swatch">
+        <div class="docs-swatch__chip" style="background:var(--danger)"></div>
+        <div class="docs-swatch__meta"><strong>Crítico (--danger)</strong><span>#DD4B4B</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:var(--space-6)">
+      <div class="docs-type-row"><span class="mono">2.5rem</span><span style="font-family:var(--font-display);font-size:var(--text-2xl)">Título de sección</span></div>
+      <div class="docs-type-row"><span class="mono">1.375rem</span><span style="font-family:var(--font-display);font-size:var(--text-lg)">Subtítulo</span></div>
+      <div class="docs-type-row"><span class="mono">1rem</span><span style="font-size:var(--text-base)">Texto base para párrafos y formularios</span></div>
+      <div class="docs-type-row"><span class="mono">0.8rem</span><span class="mono" style="font-size:var(--text-sm)">INC-2049 — texto monoespaciado para IDs y código</span></div>
+    </div>
+  </section>
+
+  <!-- BOTONES -->
+  <section class="docs-section" id="botones">
+    <div class="docs-section__head">
+      <div>
+        <span class="docs-section__code">UI-KIT-01 · Componente</span>
+        <h2>Botones</h2>
+      </div>
+    </div>
+    <p class="docs-section__desc">Variantes semánticas, tamaños y estados. Clase base <code>.btn</code> + modificador.</p>
+
+    <div class="docs-row" style="margin-bottom:var(--space-4)">
+      <button class="btn btn--primary">Crear ticket</button>
+      <button class="btn btn--secondary">Cancelar</button>
+      <button class="btn btn--success">Marcar resuelto</button>
+      <button class="btn btn--danger">Escalar a crítico</button>
+      <button class="btn btn--ghost">Ver historial</button>
+      <button class="btn btn--primary" disabled>Bloqueado</button>
+    </div>
+
+    <div class="docs-row">
+      <button class="btn btn--primary btn--sm">Pequeño</button>
+      <button class="btn btn--primary">Normal</button>
+      <button class="btn btn--primary btn--lg">Grande</button>
+      <button class="btn btn--secondary btn--icon" aria-label="Notificaciones">🔔</button>
+    </div>
+  </section>
+
+  <!-- FORMULARIOS -->
+  <section class="docs-section" id="formularios">
+    <div class="docs-section__head">
+      <div>
+        <span class="docs-section__code">UI-KIT-02 · Componente</span>
+        <h2>Formularios</h2>
+      </div>
+    </div>
+    <p class="docs-section__desc">Campos consistentes para crear y editar tickets, con estados de foco, ayuda y error.</p>
+
+    <form class="docs-grid docs-grid--3" onsubmit="return false;">
+      <div class="form-field">
+        <label for="titulo">Título del incidente <span class="req">*</span></label>
+        <input class="form-control" type="text" id="titulo" placeholder="Ej. Falla en impresora de Lab 3">
+        <span class="form-hint">Sé breve y específico.</span>
+      </div>
+
+      <div class="form-field">
+        <label for="prioridad">Prioridad</label>
+        <select class="form-control" id="prioridad">
+          <option>Baja</option>
+          <option>Media</option>
+          <option selected>Alta</option>
+          <option>Crítica</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="correo">Correo de contacto</label>
+        <input class="form-control is-invalid" type="email" id="correo" value="usuario@utm">
+        <span class="form-error">Falta el dominio completo del correo.</span>
+      </div>
+
+      <div class="form-field" style="grid-column: 1 / -1;">
+        <label for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion" placeholder="Describe el problema con el mayor detalle posible..."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label>Notificar por correo</label>
+        <label class="form-switch">
+          <input type="checkbox" checked>
+          <span class="form-switch__track"></span>
+          Activado
+        </label>
+      </div>
+
+      <div class="form-field">
+        <label>Categoría</label>
+        <label class="form-check"><input type="checkbox" checked> Hardware</label>
+        <label class="form-check"><input type="checkbox"> Software</label>
+        <label class="form-check"><input type="checkbox"> Red</label>
+      </div>
+
+      <div class="form-field">
+        <label>Canal de origen</label>
+        <label class="form-check"><input type="radio" name="canal" checked> Portal web</label>
+        <label class="form-check"><input type="radio" name="canal"> Correo</label>
+        <label class="form-check"><input type="radio" name="canal"> Teléfono</label>
+      </div>
+    </form>
+
+    <div class="docs-row" style="margin-top:var(--space-4)">
+      <button class="btn btn--primary">Guardar ticket</button>
+      <button class="btn btn--ghost">Limpiar</button>
+    </div>
+  </section>
+
+  <!-- TARJETAS -->
+  <section class="docs-section" id="tarjetas">
+    <div class="docs-section__head">
+      <div>
+        <span class="docs-section__code">UI-KIT-03 · Componente</span>
+        <h2>Tarjetas</h2>
+      </div>
+    </div>
+    <p class="docs-section__desc">La franja izquierda (<code>data-status</code>) comunica la severidad sin depender solo del color del texto.</p>
+
+    <div class="docs-grid docs-grid--3">
+      <article class="card card--ticket card--hoverable" data-status="nuevo">
+        <header class="card__header">
+          <span class="mono">INC-2051</span>
+          <span class="badge badge--info">Nuevo</span>
+        </header>
+        <div class="card__body">
+          <p>Solicitud de acceso a VPN para personal remoto.</p>
+        </div>
+        <footer class="card__footer">
+          <button class="btn btn--secondary btn--sm">Tomar ticket</button>
+        </footer>
+      </article>
+
+      <article class="card card--ticket card--hoverable" data-status="pendiente">
+        <header class="card__header">
+          <span class="mono">INC-2047</span>
+          <span class="badge badge--warning">Pendiente</span>
+        </header>
+        <div class="card__body">
+          <p>Esperando respuesta del usuario para agendar visita técnica.</p>
+        </div>
+        <footer class="card__footer">
+          <button class="btn btn--secondary btn--sm">Recordar</button>
+        </footer>
+      </article>
+
+      <article class="card card--ticket card--hoverable" data-status="resuelto">
+        <header class="card__header">
+          <span class="mono">INC-2030</span>
+          <span class="badge badge--success">Resuelto</span>
+        </header>
+        <div class="card__body">
+          <p>Reinstalación de drivers de impresora completada.</p>
+        </div>
+        <footer class="card__footer">
+          <button class="btn btn--ghost btn--sm">Reabrir</button>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <!-- ALERTAS -->
+  <section class="docs-section" id="alertas">
+    <div class="docs-section__head">
+      <div>
+        <span class="docs-section__code">UI-KIT-04 · Componente</span>
+        <h2>Alertas</h2>
+      </div>
+    </div>
+    <p class="docs-section__desc">Mensajes de sistema descartables, construidos sin una sola línea de JavaScript.</p>
+
+    <div class="u-stack">
+      <div class="alert alert--info">
+        <span class="alert__icon">i</span>
+        <div class="alert__content">
+          <strong>Nuevo ticket asignado</strong> Se te asignó el incidente INC-2051.
+        </div>
+      </div>
+
+      <div class="alert alert--success">
+        <span class="alert__icon">✓</span>
+        <div class="alert__content">
+          <strong>Ticket resuelto</strong> El incidente INC-2030 se cerró correctamente.
+        </div>
+      </div>
+
+      <input type="checkbox" id="alert-demo" class="alert-dismiss">
+      <div class="alert alert--danger">
+        <span class="alert__icon">!</span>
+        <div class="alert__content">
+          <strong>Conexión perdida</strong> No se pudo sincronizar con el servidor de tickets.
+        </div>
+        <label for="alert-demo" class="alert__close" aria-label="Cerrar alerta">×</label>
+      </div>
+    </div>
+  </section>
+
+  <footer class="docs-footer">
+    UI Kit del Sistema de Gestión de Incidentes — rama <span class="mono">feature/ui-kit</span>
+  </footer>
+
+</body>
+</html>
