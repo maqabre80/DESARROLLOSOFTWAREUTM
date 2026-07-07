@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Panel de Control (Dashboard)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="docs-topbar">
+        <div class="docs-topbar__brand">
+            <span>Help Desk</span>
+            <span class="mono">v1.0</span>
+        </div>
+        <nav class="docs-nav">
+            <a href="index.html"><strong>Inicio (Dashboard)</strong></a>
+            <a href="reportar.html">Reportar Incidente</a>
+            <a href="tickets.html">Lista de Tickets</a>
+        </nav>
+    </header>
+
+    <section class="docs-hero">
+        <div class="docs-hero__inner">
+            <div>
+                <div class="docs-hero__eyebrow">DTI - Plataforma de Soporte</div>
+                <h1>Sistema de Gestión de Incidentes (Help Desk)</h1>
+                <p>Infraestructura de Servidores y Data Center</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="docs-section">
+        <section aria-labelledby="metricas-titulo">
+            <div class="docs-section__head">
+                <h2 id="metricas-titulo">Panel de Control en Tiempo Real</h2>
+                <span class="docs-section__code">Métricas Globales</span>
+            </div>
+            <p class="docs-section__desc">Métricas globales de disponibilidad del servicio y rendimiento técnico.</p>
+            
+            <div class="docs-grid docs-grid--3">
+                <article class="card card--hoverable">
+                    <div class="card__header">
+                        <h3>Tickets Abiertos</h3>
+                        <span class="badge badge--danger">Alerta</span>
+                    </div>
+                    <div class="card__body">
+                        <p><strong>12</strong> incidentes pendientes de asignación.</p>
+                    </div>
+                </article>
+
+                <article class="card card--hoverable">
+                    <div class="card__header">
+                        <h3>Disponibilidad del Data Center</h3>
+                        <span class="badge badge--success">SLA OK</span>
+                    </div>
+                    <div class="card__body">
+                        <p><strong>99.5%</strong> (Dentro del SLA establecido).</p>
+                    </div>
+                </article>
+
+                <article class="card card--hoverable">
+                    <div class="card__header">
+                        <h3>Tiempo Promedio de Resolución</h3>
+                        <span class="badge badge--info">Métrica</span>
+                    </div>
+                    <div class="card__body">
+                        <p><strong>1h 45m</strong> para categorías críticas.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section aria-labelledby="categorias-titulo">
+            <div class="docs-section__head">
+                <h2 id="categorias-titulo">Categorías del Sistema (Factory Method)</h2>
+                <span class="docs-section__code">Patrón Creacional</span>
+            </div>
+            <p class="docs-section__desc">Clasificación automatizada de incidentes para el despliegue de componentes específicos:</p>
+            
+            <div class="card">
+                <div class="card__body">
+                    <ul class="u-stack" style="list-style-type: none; padding-left: 0;">
+                        <li><span class="badge badge--neutral" style="width: 100px;">Hardware:</span> Servidores físicos, almacenamiento TrueNAS, memoria RAM.</li>
+                        <li><span class="badge badge--info" style="width: 100px;">Red:</span> Enrutadores, switches Cisco, reglas FortiGate, VLANs.</li>
+                        <li><span class="badge badge--warning" style="width: 100px;">Software:</span> Sistemas operativos (Debian/CentOS), servicios NFS, bases de datos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="docs-footer">
+        <p>&copy; 2026 Universidad Técnica de Manabí - Tecnologías de la Información</p>
+        <p>Desarrollado por: <strong class="mono">Fausto Damian Guano Loya</strong></p>
+    </footer>
+
+</body>
+</html>
